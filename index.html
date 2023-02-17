@@ -16,10 +16,10 @@
                   <a class="nav-link" href="#">Home </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Youtube</a>
+                  <a class="nav-link" href="#yt">Youtube</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Therapy</a>
+                  <a class="nav-link" href="#th">Therapy</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Meditation</a>
@@ -27,18 +27,21 @@
               </ul>
             </div>
           </nav>
+          <div class="scrollable"
+        style="padding:15px 15px 4500px;">
+    </div>
         <div class="container">
             <div class="typed-out">Hi, I am Aryan Oberoi.<br>I am an explorer of life</div>
           </div>
           <iframe src="Dark Gray & Gray Professional Work Experience Simple Resume.pdf" width="70%" height="500px">
         </iframe><br>
-        I'm also a Youtuber. I make videos about psychology, spirituality and technology.<br><br>
+        <p id="yt">I'm also a Youtuber. I make videos about psychology, spirituality and technology.</p><br><br>
         
         <center><iframe width="560" height="315" src="https://www.youtube.com/embed/lXddFVQsTZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
         <br>
         <br>
         <br>
-        <h1>Therapy</h1><br>
+        <h1 id="th">Therapy</h1><br>
         We provide you the service to connect with a therapist.
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKMMTcr9A48t0lmpWgvIm65Ch79h6nDbOm1CYM4WCaL5CIWA/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
@@ -74,11 +77,29 @@
 h2 {
     font-size: 3em;
 }     
-
+#navbar {
+  background-color: #333; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -50px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-
-
+window.onscroll = function() {
+        scroll()
+    };
+  
+    function scroll() {
+        if (document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20) {
+            document.getElementById("navlist").style.top = "0";
+        }
+        else {
+            document.getElementById("navlist").style.top
+                    = "-60px";
+        }
+    }
                 
         
         </script>
